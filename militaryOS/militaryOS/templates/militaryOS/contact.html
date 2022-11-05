@@ -1,0 +1,96 @@
+{% extends 'militaryOS/base.html' %}
+{% block title %}Contacts{% endblock %}
+{% load static %}
+{% block content %}
+	<div class="all-title-box" style="background: url({% static 'militaryOS/images/contacts.jpg' %})no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	min-height: 500px;">
+		<div class="container text-center">
+			<h1>Contacts</h1>
+		</div>
+	</div>
+	
+    <div id="contact" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Need Help? Sure we are Online!</h3>
+                <p class="lead">Let us give you more details about the special offer website you want us. Please fill out the form below. <br>We have million of website owners who happy to work with us!</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-xl-6 col-md-12 col-sm-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="contactform" class="" action="{% url 'contacts' %}" name="contactform" method="post">
+                            {% csrf_token %}
+                            <div class="row row-fluid">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    {{ form.first_name }}
+                                    {% if messages %}
+                                        <ul class="alert alert-danger" style="list-style: none;">
+                                            {% for message in messages %}
+                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    {{ form.last_name }}
+                                    {% if messages %}
+                                        <ul class="alert alert-danger" style="list-style: none;">
+                                            {% for message in messages %}
+                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    {{ form.email }}
+                                    {% if messages %}
+                                        <ul class="alert alert-danger" style="list-style: none;">
+                                            {% for message in messages %}
+                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">{{ form.phone }}
+                                    {% if messages %}
+                                        <ul class="alert alert-danger" style="list-style: none;">
+                                            {% for message in messages %}
+                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    {{ form.details }}
+                                    {% if messages %}
+                                        <ul class="alert alert-danger" style="list-style: none;">
+                                            {% for message in messages %}
+                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                                <div class="text-center pd">
+                                    <button type="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- end col -->
+				<div class="col-xl-6 col-md-12 col-sm-12">
+					<div class="map-box">
+						<div id="custom-places" class="small-map"></div>
+					</div>
+				</div>
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'militaryOS/base.html' %}
+{% block title %}Full-time form of education{% endblock %}
+{% load static %}
+{% block content %}
+    <div class="all-title-box" style="background: url({% static 'militaryOS/images/marines_entrant2.jpg' %})no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	min-height: 300px;">
+		<div class="container text-center">
+			<h1>Requirements for entrants<span class="m_1">Citius, altius, fortius.</span></h1>
+		</div>
+	</div>
+	<div id="overviews" class="section lb">
+        <div class="container">
+
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>Eligibility Requirements</h2>
+                        <p>To enlist as a Marine, you must obtain your high school diploma and be a legal U.S. resident between 17 and 28.
+							To commission as a Marine Officer, you must be a United States citizen between 20 and 28 and have obtained both a high school diploma and a bachelor's degree.</p>
+                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="{% static 'militaryOS/images/marines_entrant3.jpg' %}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="{% static 'militaryOS/images/marines_entrant1.jpg' %}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>Combat Fitness Test</h2>
+                        <p>The Marine Corps Combat Fitness Test, or CFT, measures functional fitness and simulates the demands of battle in full combat utility uniforms.
+                            The three parts of the CFT are Movement to Contact, Ammunition Lift, and Maneuver Under Fire.
+                            The Movement to Contact drill is an 880-yard sprint that mimics the stresses of running under pressure in battle.
+                            In the Ammunition Lift, Marines must lift a 30-pound ammunition can overhead until elbows lock out.
+                            The goal is to lift the can as many times as possible in a set amount of time.
+                            The Maneuver Under Fire is a 300-yard course that combines a variety of battle-related challenges, including crawls, ammunition resupply, grenade throwing, agility running, and the dragging and carrying of another Marine.</p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="message-box">
+                            <h2>Physical Fitness Test</h2>
+                            <p>The Marine Corps Physical Fitness Test, or PFT, evaluates stamina and physical conditioning.
+                                It includes 3 parts: pull-ups or push-ups, crunches or plank pose, and a 3-mile timed run.
+                                Pull-ups and push-ups are essential to building the upper body strength necessary to win battles.
+                                Crunches and planks are critical to maintaining a strong core and being battle-ready at a moment’s notice.
+                                Males must complete the three-mile run in 28 minutes or less.
+                                Females must complete the three-mile run in 31 minutes or less.</p>
+                            <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                        </div><!-- end messagebox -->
+                    </div><!-- end col -->
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="post-media wow fadeIn">
+                            <img src="{% static 'militaryOS/images/marines_entrant.jpg' %}" alt="" class="img-fluid img-rounded">
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+                </div>
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'militaryOS/base.html' %}
+{% block title %}About University{% endblock %}
+{% block content %}
+{% load static %}
+	<div class="all-title-box" style="background: url({% static 'militaryOS/images/about_marines.jpg' %})no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	min-height: 300px;">
+		<div class="container text-center">
+			<h1>About University<span class="m_1">Aut cum scuto, aut in scuto.</span></h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section lb">
+        <div class="container">
+        
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>A COLLECTIVE PURPOSE. AN EFFECTIVE MISSION.</h2>
+                        <p>The Marine Corps mission reflects every Marine's purpose. In essence, our Nation is that purpose.
+                            In our world, in ourselves, and in our way, there are conflicts, challenges, and obstacles that must be fought confidently and defeated convincingly for our Nation to prevail.
+                            These looming battles come in many forms and occur on many fronts, but each comes down to a critical choice: to demand victory or accept defeat.
+                            To pull together or fall apart. To give in or cave in. It is a decision each Marine conveys to our Nation with each battle won.</p>
+                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="{% static 'militaryOS/images/about_marines1.jpg' %}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+			</div>
+			<div class="row align-items-center">
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img src="{% static 'militaryOS/images/about_marines2.jpeg' %}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+				
+				<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2>FINDING PURPOSE IN OUR NATION'S FIGHT</h2>
+                        <p>United States Marines are a family that fights together, finding individual purpose in a collective cause—the protection of our Nation and the advancement of its ideals.
+                            Side by side, we welcome obstacles and thrive on challenge.
+                            Each Marine stands as a vital part of a united force, greater than any individual, more fulfilled than ever before.</p>
+
+                        <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<div class="hmv-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><img src="{% static 'militaryOS/images/jet.png' %}" alt="jet"></div>
+						<h3>Air forces</h3>
+						<div class="tr-pa">M</div>
+						<p>In the broadest sense – is the national military branch that primarily conducts aerial warfare.
+                            More specifically, it is the branch of a nation's armed services that is responsible for aerial warfare as distinct from an army or navy.
+                            Typically, air forces are responsible for gaining control of the air, carrying out strategic and tactical bombing missions, and providing support to land and naval forces often in the form of aerial reconnaissance and close air support.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><img src="{% static 'militaryOS/images/soldier.png' %}" alt="soldier"></div>
+						<h3>Special forces</h3>
+						<div class="tr-pa">V</div>
+						<p>From sabotaging enemy communications and supply lines to infiltrating enemy lines through quiet, guerrilla war-style tactics, you'll do what it takes to defeat enemies as a Special Forces Soldier.
+                            As part of the elite Special Operations Forces, you'll work in a focused, small-team operational structure, leveraging the most advanced technology, weapons, and gear.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><img src="{% static 'militaryOS/images/warship.png' %}" alt="warship"></div>
+						<h3>Navy forces</h3>
+						<div class="tr-pa">H</div>
+						<p>The Navy maintains, trains and equips combat-ready naval forces capable of winning wars, deterring aggression and maintaining the freedom of the seas. U.S.
+                            Navy personnel expertly operate virtually every type of military equipment in the country's arsenal, everything from Humvees to aircraft carriers.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
