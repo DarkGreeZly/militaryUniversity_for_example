@@ -64,6 +64,7 @@ def contacts(request):
             else:
                 contact = Contact(first_name=data_model['first_name'], last_name=data_model['last_name'], email=data_model['email'], phone=data_model['phone'], details=data_model['details'])
                 contact.save()
+                messages.success(request, 'You contacts successfully sent.')
         else:
             print('form non valid')
             return render(request, 'militaryOS/contact.html', {
@@ -80,7 +81,7 @@ def contacts(request):
 class ContactForm(forms.Form):
     first_name = forms.CharField(label='First Name', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First name'}))
     last_name = forms.CharField(label='Last Name', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last name'}))
-    email = forms.EmailField(label='Your Email', required=True, widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Email'}))
-    phone = forms.CharField(label='Phone Number', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Phone number'}))
+    email = forms.EmailField(label='Your Email', required=True, widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'example@email.com'}))
+    phone = forms.CharField(label='Phone Number', widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '+380(xx)xxx-xx-xx'}))
     details = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Give us more detail...', 'row': '6'}))
 
