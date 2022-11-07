@@ -31,59 +31,71 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     {{ form.first_name }}
                                     {% if messages %}
-                                        <ul class="alert alert-danger" style="list-style: none;">
                                             {% for message in messages %}
-                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                {% if message.tags == 'error' %}
+                                                    <ul class="alert alert-danger" style="list-style: none;">
+                                                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                    </ul>
+                                                {% endif %}
                                             {% endfor %}
-                                        </ul>
                                     {% endif %}
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     {{ form.last_name }}
                                     {% if messages %}
-                                        <ul class="alert alert-danger" style="list-style: none;">
                                             {% for message in messages %}
-                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                {% if message.tags == 'error' %}
+                                                    <ul class="alert alert-danger" style="list-style: none;">
+                                                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                    </ul>
+                                                {% endif %}
                                             {% endfor %}
-                                        </ul>
                                     {% endif %}
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     {{ form.email }}
                                     {% if messages %}
-                                        <ul class="alert alert-danger" style="list-style: none;">
                                             {% for message in messages %}
-                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                {% if message.tags == 'error' %}
+                                                    <ul class="alert alert-danger" style="list-style: none;">
+                                                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                    </ul>
+                                                {% endif %}
                                             {% endfor %}
-                                        </ul>
                                     {% endif %}
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">{{ form.phone }}
                                     {% if messages %}
-                                        <ul class="alert alert-danger" style="list-style: none;">
                                             {% for message in messages %}
-                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                {% if message.tags == 'error' %}
+                                                    <ul class="alert alert-danger" style="list-style: none;">
+                                                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                    </ul>
+                                                {% endif %}
                                             {% endfor %}
-                                        </ul>
                                     {% endif %}
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     {{ form.details }}
                                     {% if messages %}
-                                        <ul class="alert alert-danger" style="list-style: none;">
                                             {% for message in messages %}
-                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                {% if message.tags == 'error' %}
+                                                    <ul class="alert alert-danger" style="list-style: none;">
+                                                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                    </ul>
+                                                {% endif %}
                                             {% endfor %}
-                                        </ul>
                                     {% endif %}
                                 </div>
                                 <div class="text-center pd">
                                     {% if messages %}
-                                        <ul class="alert alert-success" style="list-style: none;">
                                             {% for message in messages %}
-                                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                {% if message.tags == 'success' %}
+                                                    <ul class="alert alert-success" style="list-style: none;">
+                                                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                                                    </ul>
+                                                {% endif %}
                                             {% endfor %}
-                                        </ul>
                                     {% endif %}
                                     <button type="submit" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
                                 </div>
